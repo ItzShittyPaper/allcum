@@ -1,0 +1,160 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://sound/mp5.wav" type="AudioStream" id=1]
+[ext_resource path="res://models/mp5.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/glback.bmp" type="Texture" id=3]
+[ext_resource path="res://models/handleback.bmp" type="Texture" id=4]
+[ext_resource path="res://models/rubbergloveCHROME.bmp" type="Texture" id=5]
+[ext_resource path="res://models/gunbodyrear.bmp" type="Texture" id=6]
+[ext_resource path="res://models/gunsidemap.bmp" type="Texture" id=7]
+[ext_resource path="res://models/clip.bmp" type="Texture" id=8]
+[ext_resource path="res://models/buttstockrear.bmp" type="Texture" id=9]
+[ext_resource path="res://models/HK_chrome.bmp" type="Texture" id=10]
+[ext_resource path="res://models/Silencerback.bmp" type="Texture" id=11]
+[ext_resource path="res://models/PLAYER_Chrome2.bmp" type="Texture" id=12]
+[ext_resource path="res://models/PLAYER_Cuff1.bmp" type="Texture" id=13]
+[ext_resource path="res://models/PLAYER_ForeArm1.bmp" type="Texture" id=14]
+[ext_resource path="res://models/sighttop.bmp" type="Texture" id=15]
+[ext_resource path="res://weapon.gd" type="Script" id=16]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fire"
+length = 0.5
+tracks/0/type = "transform"
+tracks/0/path = NodePath("mp5")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0.1, 0, 0, 0, 1, 0.06, 0.06, 0.06, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 0.06, 0.06, 0.06 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "walk"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("mp5")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 0.1, 0.06, 0.06, 0.06, 0.5, 1, 0, 0, 1, 0, 0, 0, 1, 0.06, 0.06, 0.06, 1, 1, 0, 0, 0.1, 0, 0, 0, 1, 0.06, 0.06, 0.06 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fire"
+length = 0.5
+tracks/0/type = "transform"
+tracks/0/path = NodePath("mp5")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0.1, 0, 0, 0, 1, 0.06, 0.06, 0.06, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 0.06, 0.06, 0.06 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "walk"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("mp5")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 0.1, 0.06, 0.06, 0.06, 0.5, 1, 0, 0, 0.1, 0, 0, 0, 1, 0.06, 0.06, 0.06, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0.06, 0.06, 0.06 )
+
+[sub_resource type="Skin" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 7 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 6 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 4 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.419608, 0.643137, 0.494118, 0 )
+albedo_texture = ExtResource( 5 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.619608, 0.580392, 0.509804, 0 )
+albedo_texture = ExtResource( 8 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0.886275, 0.886275, 0.886275, 0 )
+albedo_texture = ExtResource( 10 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.960784, 0.709804, 0.772549, 0 )
+albedo_texture = ExtResource( 11 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.882353, 0.713726, 0.466667, 0 )
+albedo_texture = ExtResource( 9 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 12 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 14 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 13 )
+metallic = 0.5
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 15 )
+metallic = 0.5
+
+[node name="weapon" type="KinematicBody"]
+input_ray_pickable = false
+collision_layer = 524288
+collision_mask = 524288
+script = ExtResource( 16 )
+
+[node name="AnimationPlayerFire" type="AnimationPlayer" parent="."]
+anims/fire = SubResource( 1 )
+anims/walk = SubResource( 2 )
+
+[node name="AnimationPlayerWalk" type="AnimationPlayer" parent="."]
+anims/fire = SubResource( 3 )
+anims/walk = SubResource( 4 )
+
+[node name="mp5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0.1 )
+skin = SubResource( 5 )
+material/0 = SubResource( 6 )
+material/1 = SubResource( 7 )
+material/2 = SubResource( 8 )
+material/3 = SubResource( 9 )
+material/4 = SubResource( 10 )
+material/5 = SubResource( 11 )
+material/6 = SubResource( 12 )
+material/7 = SubResource( 13 )
+material/8 = SubResource( 14 )
+material/9 = SubResource( 15 )
+material/10 = SubResource( 16 )
+material/11 = SubResource( 17 )
+material/12 = SubResource( 18 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0199046, 0.201193, 0.98495 )
+stream = ExtResource( 1 )
